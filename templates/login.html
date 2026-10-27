@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+      <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SJ Frames Admin Login</title>
+    <style>
+        body {
+            font-family: Inter, Aptos, "Segoe UI", system-ui, -apple-system, sans-serif;
+            background: radial-gradient(ellipse at 15% 0%, #e9ddff 0, transparent 38%), #f6f3fb;
+            color: #21172e;
+            margin: 0;
+            display: grid;
+            place-items: center;
+            min-height: 100vh;
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility
+        }
+
+        .card {
+            background: white;
+            padding: 28px;
+            border-radius: 18px;
+            width: min(360px, 85vw);
+            box-shadow: 0 12px 40px #38205d18
+        }
+
+        input,
+        button {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 12px;
+            margin: 8px 0;
+            border-radius: 10px;
+            border: 1px solid #ddd3e9;
+            font: inherit
+        }
+
+        button {
+            background: linear-gradient(135deg, #6d28d9, #8b5cf6);
+            color: white;
+            border: 0;
+            font-weight: 750;
+            cursor: pointer;
+            letter-spacing: .01em
+        }
+
+        h2 {
+            font-weight: 750;
+            letter-spacing: -.03em
+        }
+
+        label {
+            font-size: 13px;
+            font-weight: 650
+        }
+
+        input {
+            font: inherit
+        }
+
+        .error {
+            color: #b42318
+        }
+    </style>
+</head>
+
+<body>
+    <form class="card" method="post"><input type="hidden" name="_csrf_token" value="{{ csrf_token() }}">
+        <h2>💜 SJ Frames Admin</h2>
+        <p>Sign in to view customer orders.</p>{% if error %}<p class="error">{{ error }}</p>{% endif
+        %}<label>Username</label><input name="username" required autocomplete="username"><label>Password</label><input
+            name="password" type="password" required autocomplete="current-password"><button>Sign in</button>
+    </form>
+</body>
+
+</html>

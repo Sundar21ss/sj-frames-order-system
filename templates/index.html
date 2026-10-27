@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<link rel="stylesheet"href="{{url_for('static',filename='style.css')}}"
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Lucky Planet Studios | SJ Frames — Custom Laptop Skin Order Form</title>
+<style>
+  :root{--bg:#f6f3fb;--card:#fff;--ink:#21172e;--muted:#756b82;--purple:#6d28d9;--purple2:#8b5cf6;--line:#e8e0f1;--soft:#f3edff;--good:#16845b;--bad:#b42318}
+  *{box-sizing:border-box} body{margin:0;background:radial-gradient(circle at top right,#e9ddff 0,transparent 34%),var(--bg);font-family:Inter,Aptos,"Segoe UI",system-ui,-apple-system,sans-serif;color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;font-kerning:normal}
+  .wrap{max-width:900px;margin:34px auto;padding:0 16px 40px}.hero{text-align:center;margin-bottom:22px}.logo{display:flex;align-items:center;justify-content:center;width:108px;height:108px;margin:0 auto 8px;border-radius:0;background:transparent;color:inherit;font-size:25px;box-shadow:none}.planet-logo {
+    display: block;
+    width: 115%;
+    height: 115%;
+    object-fit: contain;
+    object-position: center;
+    transform: scale(1.4);
+
+
+    /* Premium gold outline effect */
+    filter:
+        drop-shadow(0.2px 0 0.2px #D4AF37)
+        drop-shadow(-0.2px 0 0 #D4AF37)
+        drop-shadow(0 0.2px 0 #D4AF37)
+        drop-shadow(0 -0.2px 0 #D4AF37);
+
+}.brand-services{margin:-5px 0 10px;color:#9a7a3c;font-size:11px;font-weight:800;letter-spacing:3px;text-transform:uppercase}.brand-name{margin:12px 0 2px;font-size:clamp(21px,4vw,29px);font-weight:900;letter-spacing:1px}.sub-brand{margin:0 0 10px;color:var(--purple);font-size:14px;font-weight:800;letter-spacing:2px}.hero h1{margin:8px 0 4px;font-size:clamp(26px,5vw,38px);letter-spacing:-.8px}.hero p{margin:0;color:var(--muted)}
+  form{background:var(--card);border:1px solid #eee7f7;border-radius:24px;padding:clamp(18px,4vw,34px);box-shadow:0 18px 55px #38205d12}.section{padding:22px 0;border-bottom:1px solid var(--line)}.section:first-child{padding-top:0}.section:last-of-type{border-bottom:0}.section-head{display:flex;gap:12px;align-items:center;margin-bottom:18px}.num{width:36px;height:36px;display:grid;place-items:center;border-radius:12px;background:var(--soft);color:var(--purple);font-weight:800}.section h2{font-size:18px;margin:0}.section-head p{margin:2px 0 0;color:var(--muted);font-size:13px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.field{min-width:0}.field.full{grid-column:1/-1}label{display:block;font-size:13px;font-weight:700;margin:0 0 7px}.required{color:var(--purple)}input,select,textarea{width:100%;border:1px solid #ddd3e9;border-radius:12px;padding:12px 13px;background:#fff;color:var(--ink);font:inherit;outline:none;transition:.18s}input:focus,select:focus,textarea:focus{border-color:var(--purple2);box-shadow:0 0 0 3px #8b5cf626}textarea{min-height:100px;resize:vertical}.hint{font-size:12px;color:var(--muted);margin:6px 0 0}.upload{border:1.5px dashed #c8b5e7;background:#fbf9ff;border-radius:15px;padding:16px}.upload input{border:0;padding:4px 0;background:transparent}.preview{display:none;margin-top:12px;max-width:100%;max-height:260px;object-fit:contain;border-radius:12px;border:1px solid var(--line);background:#fff}.file-name{font-size:12px;color:var(--muted);overflow-wrap:anywhere}.checks{display:grid;gap:10px}.check{display:flex;align-items:flex-start;gap:10px;padding:12px;border:1px solid var(--line);border-radius:12px;background:#fdfcff}.check input{width:17px;height:17px;margin-top:3px;accent-color:var(--purple);flex-shrink:0}.check label{font-weight:500;margin:0}.note{background:#f7f2ff;border:1px solid #e8dcff;color:#55416f;padding:13px 15px;border-radius:13px;font-size:13px;margin-top:14px}.actions{display:flex;gap:12px;align-items:center;margin-top:22px;flex-wrap:wrap}.btn{border:0;border-radius:13px;padding:13px 20px;font-weight:800;font-size:14px;cursor:pointer}.primary{color:#fff;background:linear-gradient(135deg,var(--purple),var(--purple2));box-shadow:0 8px 18px #6d28d92b}.secondary{background:#f1edf7;color:#4f4261}.status{font-size:13px;color:var(--muted);margin-top:12px}.footer{text-align:center;color:var(--muted);font-size:12px;margin-top:18px}.success{display:none;margin-top:16px;padding:14px;border-radius:12px;background:#eaf8f1;color:#116344;border:1px solid #bde8d2}.error{color:var(--bad)}.field-error{display:none;color:var(--bad);font-size:12px;font-weight:700;margin:7px 0 0}.field-error.show{display:block}.invalid-field{border-color:var(--bad)!important;box-shadow:0 0 0 3px #b4231818!important}.section-error{padding:12px 14px;margin:12px 0;background:#fff4f2;border:1px solid #ffd2cc;border-radius:12px;color:var(--bad);font-size:13px}
+
+  .thankyou-overlay{position:fixed;inset:0;background:rgba(25,12,43,.76);backdrop-filter:blur(7px);display:none;align-items:center;justify-content:center;padding:18px;z-index:9999}.thankyou-overlay.open{display:flex;animation:fadeIn .2s ease}.thankyou-card{width:min(490px,100%);background:#fff;border:1px solid #eee5fa;border-radius:26px;padding:30px 25px;text-align:center;box-shadow:0 28px 90px #160b2b55;position:relative;animation:popIn .28s ease}.thankyou-icon{width:72px;height:72px;margin:0 auto 15px;border-radius:24px;display:grid;place-items:center;background:linear-gradient(135deg,#6d28d9,#a78bfa);color:#fff;font-size:34px}.thankyou-card h2{font-size:26px;margin:8px 0;color:var(--ink)}.thankyou-card p{color:var(--muted);font-size:14px}.reference-box{background:#f6f0ff;border:1px dashed #b69ae8;border-radius:15px;padding:14px;margin:18px 0}.reference-box small{display:block;color:var(--muted);font-size:11px;font-weight:800;letter-spacing:1.5px}.reference-code{font-size:22px;font-weight:900;color:var(--purple);letter-spacing:1px;overflow-wrap:anywhere}.thankyou-actions{display:grid;gap:10px;margin-top:18px}.whatsapp-btn{display:flex;align-items:center;justify-content:center;gap:9px;width:100%;padding:14px 16px;border-radius:13px;text-decoration:none;color:#fff;background:#128c52;font-weight:900;border:0;cursor:pointer}.close-thanks{width:100%;padding:12px;border-radius:12px;border:1px solid var(--line);background:#fff;color:var(--ink);font-weight:800;cursor:pointer}.privacy-mini{font-size:11px!important;margin-top:14px}.modal-close-x{position:absolute;right:13px;top:13px;border:0;background:#f4effa;color:#6a587c;border-radius:50%;width:32px;height:32px;font-size:18px;cursor:pointer}@keyframes fadeIn{from{opacity:0}to{opacity:1}}@keyframes popIn{from{transform:translateY(12px) scale(.97);opacity:0}to{transform:translateY(0) scale(1);opacity:1}}
+
+  h1,h2,h3,.brand-name,.reference-code{font-family:Inter,Aptos,"Segoe UI",system-ui,sans-serif;font-weight:750;letter-spacing:-.025em}label,.section-head p,.hint,.status,.footer{letter-spacing:.01em}input,select,textarea,button{font-family:Inter,Aptos,"Segoe UI",system-ui,sans-serif;font-kerning:normal}
+  @media(max-width:620px){.wrap{margin:20px auto}.grid{grid-template-columns:1fr}.field.full{grid-column:auto}.section{padding:19px 0}.actions .btn{width:100%}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <div class="logo"><img class="planet-logo" src="{{ url_for('static', filename='logo1.png') }}" alt="Lucky Planet planet emblem"></div>
+    <div class="brand-name">LUCKY PLANET STUDIOS</div>
+    <div class="sub-brand">SJ FRAMES</div>
+    <div class="brand-services">FRAMES AND GIFTS</div>
+    <h1>Custom Laptop Skin Order Form</h1>
+    <p>Custom laptop skins · Frames · Gifts — made with care.</p>
+  </header>
+  <form id="orderForm" method="post" action="/submit" enctype="multipart/form-data">
+    <input type="hidden" name="_csrf_token" value="{{ csrf_token() }}">
+    {% if error_message and not (field_errors.get('whatsapp') and field_errors|length == 1) %}<div class="section-error" role="alert" id="serverError">{{ error_message }}</div>{% endif %}
+    <section class="section">
+      <div class="section-head"><div class="num">01</div><div><h2>Customer details</h2><p>How can we contact you about your design?</p></div></div>
+      <div class="grid">
+        <div class="field"><label for="customerName">Customer name <span class="required">*</span></label><input id="customerName" name="customerName" autocomplete="name" required value="{{ form_values.get('customerName', '')|e }}" placeholder="Enter your full name"></div>
+        <div class="field"><label for="whatsapp">WhatsApp number <span class="required">*</span></label><input id="whatsapp" name="whatsapp" type="tel" autocomplete="tel" required pattern="[+0-9() -]{8,20}" value="{{ form_values.get('whatsapp', '+91 ')|e }}" aria-describedby="whatsappHint whatsappError" placeholder="+91 98765 43210"><p id="whatsappHint" class="hint">India country code +91 is prefilled. Keep it or replace it with your country code if you are outside India.</p><p id="whatsappError" class="field-error{% if field_errors.get('whatsapp') %} show{% endif %}" role="alert">{{ field_errors.get('whatsapp', 'Please enter a valid WhatsApp number with 8–15 digits.') }}</p></div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="section-head"><div class="num">02</div><div><h2>Laptop details</h2><p>We verify the fit before production.</p></div></div>
+      <div class="grid">
+        <div class="field"><label for="brand">Laptop brand <span class="required">*</span></label><select id="brand" name="brand" required><option value="">Select brand</option><option{% if form_values.get('brand') == 'Apple' %} selected{% endif %}>Apple</option><option{% if form_values.get('brand') == 'ASUS' %} selected{% endif %}>ASUS</option><option{% if form_values.get('brand') == 'Acer' %} selected{% endif %}>Acer</option><option{% if form_values.get('brand') == 'Dell' %} selected{% endif %}>Dell</option><option{% if form_values.get('brand') == 'HP' %} selected{% endif %}>HP</option><option{% if form_values.get('brand') == 'Lenovo' %} selected{% endif %}>Lenovo</option><option{% if form_values.get('brand') == 'MSI' %} selected{% endif %}>MSI</option><option{% if form_values.get('brand') == 'Samsung' %} selected{% endif %}>Samsung</option><option{% if form_values.get('brand') == 'Microsoft Surface' %} selected{% endif %}>Microsoft Surface</option><option{% if form_values.get('brand') == 'Other' %} selected{% endif %}>Other</option></select></div>
+        <div class="field"><label for="model">Exact model number/name <span class="required">*</span></label><input id="model" name="model" required value="{{ form_values.get('model', '')|e }}" placeholder="e.g. IdeaPad Slim 5 14IRL8"></div>
+        <div class="field"><label for="length">Lid length (cm) <span class="required">*</span></label><input id="length" name="length" type="number" min="5" max="100" step="0.1" required value="{{ form_values.get('length', '')|e }}" placeholder="e.g. 35.6"></div>
+        <div class="field"><label for="width">Lid width (cm) <span class="required">*</span></label><input id="width" name="width" type="number" min="5" max="100" step="0.1" required value="{{ form_values.get('width', '')|e }}" placeholder="e.g. 24.5"></div>
+        <div class="field full"><label for="lidPhoto">Photo of your laptop lid <span class="required">*</span></label><div class="upload"><input id="lidPhoto" name="lidPhoto" type="file" accept="image/jpeg,image/png,image/webp" required><p class="hint">Upload a clear photo of the closed laptop, showing the whole lid. JPG, PNG or WebP; maximum 10 MB.</p><div id="lidPhotoName" class="file-name"></div><img id="lidPreview" class="preview" alt="Laptop lid photo preview"></div></div>
+        <div class="field full"><label for="features">Logo, camera or special cut-out details</label><textarea id="features" name="features" placeholder="Tell us where the logo, camera, vents or other features are. We will verify the fit before cutting.">{{ form_values.get('features', '')|e }}</textarea></div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="section-head"><div class="num">03</div><div><h2>Your custom design</h2><p>Upload the image you want printed on your laptop skin.</p></div></div>
+      <div class="grid">
+        <div class="field full"><label for="designImage">Upload your own design image <span class="required">*</span></label><div class="upload"><input id="designImage" name="designImage" type="file" accept="image/jpeg,image/png,image/webp" required><p class="hint">Use the highest-quality image available. JPG, PNG or WebP; maximum 10 MB. Avoid blurry screenshots where possible.</p><div id="designImageName" class="file-name"></div><img id="designPreview" class="preview" alt="Custom design image preview"></div></div>
+        <div class="field"><label for="finish">Preferred finish <span class="required">*</span></label><select id="finish" name="finish" required><option value="">Choose finish</option><option{% if form_values.get('finish') == 'Matte' %} selected{% endif %}>Matte</option><option{% if form_values.get('finish') == 'Glossy' %} selected{% endif %}>Glossy</option><option{% if form_values.get('finish') == 'Need advice' %} selected{% endif %}>Need advice</option></select></div>
+        <div class="field full"><label for="instructions">Design instructions</label><textarea id="instructions" name="instructions" placeholder="Describe cropping, background removal, colours, text placement or other changes you want.">{{ form_values.get('instructions', '')|e }}</textarea></div>
+      </div>
+      <div class="note"><strong>Image note:</strong> We will check image quality and laptop compatibility. Screen previews cannot guarantee exact printed colours. Production should begin only after you approve the final design and the laptop measurements are verified.</div>
+    </section>
+    <section class="section">
+      <div class="section-head"><div class="num">04</div><div><h2>Confirm your order details</h2><p>Please review these points before submitting.</p></div></div>
+      <div class="checks">
+        <div class="check"><input id="detailsConfirm" name="detailsConfirm" value="yes" type="checkbox" required{% if form_values.get('detailsConfirm') == 'yes' %} checked{% endif %}><label for="detailsConfirm">I confirm that the laptop brand, model and measurements I entered are accurate. <span class="required">*</span></label></div>
+        <div class="check"><input id="imageRights" name="imageRights" value="yes" type="checkbox" required{% if form_values.get('imageRights') == 'yes' %} checked{% endif %}><label for="imageRights">I have the right or permission to use the uploaded image for this custom product. <span class="required">*</span></label></div>
+        <div class="check"><input id="previewApproval" name="previewApproval" value="yes" type="checkbox" required{% if form_values.get('previewApproval') == 'yes' %} checked{% endif %}><label for="previewApproval">I understand that I must approve the final design preview before printing or cutting begins. <span class="required">*</span></label></div>
+        <div class="check"><input id="privacyConsent" name="privacyConsent" value="yes" type="checkbox" required{% if form_values.get('privacyConsent') == 'yes' %} checked{% endif %}><label for="privacyConsent">I agree that my contact details and uploaded files may be used to review and fulfil this custom-skin enquiry. <span class="required">*</span></label></div>
+      </div>
+      <div class="actions"><button type="submit" class="btn primary">Review my order details</button><button type="reset" class="btn secondary">Clear form</button></div>
+      {% with messages = get_flashed_messages() %}{% if messages %}<div class="error" role="alert">{% for message in messages %}<p>{{ message }}</p>{% endfor %}</div>{% endif %}{% endwith %}
+
+      <div id="formStatus" class="status" role="status">Your details are handled by the order system when you submit.</div>
+      <div id="successBox" class="success" role="status" style="display:none"></div>
+    </section>
+  </form>
+
+{% if success_reference %}
+<div id="thankyouModal" class="thankyou-overlay open" role="dialog" aria-modal="true" aria-labelledby="thankyouTitle">
+ <div class="thankyou-card"><button type="button" class="modal-close-x" aria-label="Close" onclick="closeThankyou()">×</button><div class="thankyou-icon">✓</div><div class="sub-brand">SJ FRAMES · ORDER RECEIVED</div><h2 id="thankyouTitle">Thank you for your order!</h2><p>We've saved your request. Confirm below to send the reference to SJ FRAMES on WhatsApp.</p>
+ <div class="reference-box"><small>YOUR ORDER REFERENCE</small><div class="reference-code" id="orderReference">{{ success_reference }}</div><button type="button" class="btn secondary" style="margin-top:10px" onclick="copyReference()">Copy reference</button></div>
+ <div class="thankyou-actions"><a class="whatsapp-btn" href="https://wa.me/{{ whatsapp_business_number }}?text={{ whatsapp_message|urlencode }}" target="_blank" rel="noopener">✓ Confirm & send reference on WhatsApp</a><button type="button" class="close-thanks" onclick="closeThankyou()">Continue browsing</button></div>
+ <p class="privacy-mini">WhatsApp will open with a prepared message. To deliver it, tap <b>Send</b> inside WhatsApp. This confirmation is not sent automatically.</p></div></div>
+{% endif %}
+  <footer class="footer">
+    <div style="font-size:15px;font-weight:900;letter-spacing:1px;color:var(--ink);">LUCKY PLANET STUDIOS</div>
+    <div style="font-size:13px;font-weight:800;color:var(--purple);letter-spacing:2px;">SJ FRAMES</div>
+    <div style="margin-top:4px;font-weight:700;color:var(--ink);">GIFTS AND LAPTOP SKINS</div>
+    <div style="margin-top:8px;">Customized by SJ Frames · A Lucky Planet Studio Brand</div>
+    <div style="margin-top:5px;color:var(--ink);font-weight:700;">WhatsApp / Contact: <span style="color:var(--purple);">9150900482</span></div>
+    <div style="margin-top:8px;font-style:italic;">💜 Do you need it? I've got it! 🤍</div>
+    <div style="margin-top:10px;">Your Design. Your Style. 💜<br>Orders are submitted to SJ Frames for review. Please approve the final design before production.</div>
+  </footer>
+</div>
+<script>
+const MAX_FILE = 10 * 1024 * 1024;
+function setupImage(inputId, previewId, nameId) {
+  const input = document.getElementById(inputId), preview = document.getElementById(previewId), name = document.getElementById(nameId);
+  input.addEventListener('change', () => {
+    const file = input.files && input.files[0];
+    preview.style.display = 'none'; preview.removeAttribute('src'); name.textContent = '';
+    if (!file) return;
+    const allowed = ['image/jpeg','image/png','image/webp'];
+    if (!allowed.includes(file.type)) { alert('Please choose a JPG, PNG or WebP image.'); input.value=''; return; }
+    if (file.size > MAX_FILE) { alert('This file is larger than 10 MB. Please choose a smaller image.'); input.value=''; return; }
+    name.textContent = file.name + ' · ' + (file.size / 1024 / 1024).toFixed(2) + ' MB';
+    const reader = new FileReader();
+    reader.onload = e => { preview.src = e.target.result; preview.style.display = 'block'; };
+    reader.readAsDataURL(file);
+  });
+}
+setupImage('lidPhoto','lidPreview','lidPhotoName');
+setupImage('designImage','designPreview','designImageName');
+const orderForm = document.getElementById('orderForm');
+const phoneInput = document.getElementById('whatsapp');
+const phoneError = document.getElementById('whatsappError');
+if (phoneError.classList.contains('show')) { phoneInput.classList.add('invalid-field'); setTimeout(() => phoneInput.scrollIntoView({behavior:'smooth', block:'center'}), 100); }
+function closeThankyou(){const modal=document.getElementById('thankyouModal');if(modal)modal.classList.remove('open')}
+async function copyReference(){const el=document.getElementById('orderReference');if(!el)return;try{await navigator.clipboard.writeText(el.textContent.trim());alert('Order reference copied.')}catch(e){alert('Your order reference is: '+el.textContent.trim())}}
+function validateWhatsApp(showMessage = true) {
+  const raw = phoneInput.value.trim();
+  const digits = raw.replace(/\D/g, '');
+  const allowedChars = /^[+0-9()\s-]+$/.test(raw);
+  const valid = allowedChars && digits.length >= 8 && digits.length <= 15;
+  phoneInput.classList.toggle('invalid-field', !valid && raw.length > 0);
+  phoneError.classList.toggle('show', !valid && (showMessage || raw.length > 0));
+  phoneInput.setAttribute('aria-invalid', String(!valid));
+  if (!valid && showMessage) {
+    phoneError.textContent = 'Please enter a valid WhatsApp number with 8–15 digits. Check the number and try again.';
+    phoneInput.focus();
+    phoneInput.scrollIntoView({behavior:'smooth', block:'center'});
+  }
+  return valid;
+}
+phoneInput.addEventListener('input', () => {
+  if (!phoneInput.value.trim()) {
+    phoneInput.classList.remove('invalid-field'); phoneError.classList.remove('show');
+    phoneInput.setAttribute('aria-invalid', 'false'); return;
+  }
+  validateWhatsApp(false);
+});
+orderForm.addEventListener('submit', async (event) => {
+  event.preventDefault();
+  if (!validateWhatsApp(true)) return;
+  // Validate the browser's required fields before sending anything.
+  if (!orderForm.reportValidity()) return;
+  const status = document.getElementById('formStatus');
+  const submitButton = orderForm.querySelector('button[type="submit"]');
+  const generalError = document.getElementById('serverError');
+  if (generalError) generalError.remove();
+  submitButton.disabled = true;
+  submitButton.textContent = 'Submitting securely…';
+  status.textContent = 'Checking your details and uploading images…';
+  status.classList.add('show');
+  try {
+    const response = await fetch(orderForm.action, {
+      method: 'POST', body: new FormData(orderForm),
+      headers: { 'Accept': 'application/json', 'X-Requested-With': 'XMLHttpRequest' }
+    });
+    let result;
+    try { result = await response.json(); }
+    catch (_) { throw new Error('The server returned an unexpected response. Your entries are still on this page; please try again.'); }
+    if (!response.ok || !result.ok) {
+      const errors = result.field_errors || {};
+      if (errors.whatsapp) {
+        phoneError.textContent = errors.whatsapp;
+        phoneError.classList.add('show');
+        phoneInput.classList.add('invalid-field');
+        phoneInput.focus(); phoneInput.scrollIntoView({behavior:'smooth', block:'center'});
+      }
+      status.textContent = result.message || 'Please check the highlighted fields and try again. Your entered details and selected images have been kept.';
+      status.classList.add('show');
+      status.scrollIntoView({behavior:'smooth', block:'center'});
+      return;
+    }
+    status.textContent = 'Order saved successfully. Opening confirmation…';
+    window.location.href = '/';
+  } catch (error) {
+    status.textContent = error.message || 'Unable to submit right now. Your entered details and selected images are still on this page.';
+    status.classList.add('show');
+  } finally {
+    submitButton.disabled = false;
+    submitButton.textContent = 'Review my order details';
+  }
+});
+document.getElementById('orderForm').addEventListener('reset', () => setTimeout(() => {
+  document.querySelectorAll('.preview').forEach(img => {img.style.display='none';img.removeAttribute('src');});
+  document.querySelectorAll('.file-name').forEach(el => el.textContent='');
+  document.getElementById('successBox').style.display='none';
+  phoneInput.classList.remove('invalid-field'); phoneError.classList.remove('show'); phoneInput.setAttribute('aria-invalid','false');
+  document.getElementById('formStatus').textContent='Your details are handled securely by the order system when you submit.';
+},0));
+</script>
+</body>
+</html>

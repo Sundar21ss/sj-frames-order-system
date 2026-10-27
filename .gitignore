@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+*.py[cod]
+orders.db
+private_uploads/
+static/uploads/*
+!static/uploads/.keep
+.env
+
+orders.xlsx
+orders.xlsx.tmp
+venv/
+orders_template.xlsx
+*.db
+*.xlsx

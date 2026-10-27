@@ -1,0 +1,1130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<title>SJ FRAMES | Admin Order Studio</title>
+
+<!-- Professional Inter Font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --bg: #f5f2fb;
+    --card: #fff;
+    --ink: #241833;
+    --muted: #7a7087;
+    --purple: #6d28d9;
+    --purple2: #9b6bfa;
+    --line: #e8e0f1;
+    --soft: #f3edff;
+    --green: #087f5b;
+    --amber: #9a6700;
+    --red: #b42318;
+    --shadow: 0 16px 42px #38205d0c;
+}
+
+/* GLOBAL FONT */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    margin: 0;
+    background:
+        radial-gradient(ellipse at 8% 0%, #e9ddff 0, transparent 32%),
+        var(--bg);
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-kerning: normal;
+}
+
+button,
+input,
+select,
+textarea {
+    font-family: 'Inter', sans-serif;
+    font-size: inherit;
+    font-kerning: normal;
+}
+
+a {
+    color: inherit;
+}
+
+.shell {
+    max-width: 1480px;
+    margin: auto;
+    padding: 24px;
+}
+
+/* TOP HEADER */
+
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    flex-wrap: wrap;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 24px;
+    padding: 22px 24px;
+    box-shadow: var(--shadow);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.logo {
+    width: 54px;
+    height: 54px;
+    display: grid;
+    place-items: center;
+    border-radius: 17px;
+    background: linear-gradient(135deg, var(--purple), var(--purple2));
+    color: #fff;
+    font-size: 26px;
+    box-shadow: 0 10px 25px #6d28d92b;
+    flex-shrink: 0;
+}
+
+.eyebrow {
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    font-weight: 800;
+    color: var(--purple);
+}
+
+h1 {
+    font-size: clamp(22px, 3vw, 30px);
+    margin: 3px 0;
+    font-weight: 700;
+    letter-spacing: -0.035em;
+}
+
+.subtitle {
+    margin: 0;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* BUTTONS */
+
+.actions {
+    display: flex;
+    gap: 9px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: 0;
+    border-radius: 12px;
+    padding: 11px 15px;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform .15s, box-shadow .15s;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 7px 18px #25143b12;
+}
+
+.primary {
+    background: linear-gradient(135deg, var(--purple), var(--purple2));
+    color: white;
+}
+
+.soft {
+    background: var(--soft);
+    color: var(--purple);
+}
+
+.green {
+    background: #e8f8ef;
+    color: #087f5b;
+}
+
+.danger {
+    background: #fff0f0;
+    color: var(--red);
+}
+
+/* SUMMARY CARDS */
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 13px;
+    margin: 18px 0;
+}
+
+.stat {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 19px;
+    padding: 17px;
+    box-shadow: var(--shadow);
+    min-width: 0;
+}
+
+.stat-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+}
+
+.stat-label {
+    font-size: 11px;
+    color: var(--muted);
+    font-weight: 700;
+    letter-spacing: .04em;
+}
+
+.stat-icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 11px;
+    display: grid;
+    place-items: center;
+    background: var(--soft);
+    color: var(--purple);
+    flex-shrink: 0;
+}
+
+.stat-number {
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: -0.045em;
+    margin-top: 8px;
+}
+
+.stat-foot {
+    font-size: 11px;
+    color: var(--muted);
+    margin-top: 2px;
+}
+
+/* SEARCH AND FILTERS */
+
+.toolbar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 14px;
+    margin: 18px 0;
+}
+
+.search {
+    flex: 1;
+    min-width: 230px;
+}
+
+.toolbar input,
+.toolbar select {
+    width: 100%;
+    border: 1px solid var(--line);
+    background: #fff;
+    padding: 12px;
+    border-radius: 11px;
+    outline: none;
+    color: var(--ink);
+    font-size: 13px;
+}
+
+.toolbar input:focus,
+.toolbar select:focus {
+    border-color: var(--purple2);
+    box-shadow: 0 0 0 3px #8b5cf626;
+}
+
+.result-count {
+    font-size: 12px;
+    color: var(--muted);
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+/* NOTIFICATIONS */
+
+.flash {
+    padding: 13px 16px;
+    border-radius: 12px;
+    background: #eaf8f1;
+    color: #116344;
+    margin: 14px 0;
+    border: 1px solid #bde8d2;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* SECTION HEADINGS */
+
+.section-title {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 10px;
+    margin: 24px 2px 8px;
+}
+
+.section-title h2 {
+    font-size: 19px;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    margin: 0;
+}
+
+.section-title p {
+    font-size: 12px;
+    color: var(--muted);
+    margin: 5px 0 0;
+    line-height: 1.6;
+}
+
+/* ORDER CARD */
+
+.order {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 22px;
+    margin: 15px 0;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.order-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 14px;
+    flex-wrap: wrap;
+    padding: 20px 22px;
+    background: linear-gradient(100deg, #fff, #fbf8ff);
+    border-bottom: 1px solid var(--line);
+}
+
+.ref {
+    font-size: 19px;
+    font-weight: 800;
+    letter-spacing: -0.025em;
+    overflow-wrap: anywhere;
+}
+
+.date {
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 5px;
+}
+
+.head-right {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    flex-wrap: wrap;
+}
+
+.badge {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 7px 11px;
+    border-radius: 999px;
+    background: #f0e9ff;
+    color: var(--purple);
+}
+
+.badge-new {
+    background: #fff5db;
+    color: #8a5a00;
+}
+
+.badge-completed {
+    background: #e8f8ef;
+    color: #12764f;
+}
+
+.badge-cancelled {
+    background: #fff0f0;
+    color: #b42318;
+}
+
+/* ORDER DETAILS */
+
+.order-body {
+    padding: 21px 22px;
+}
+
+.section-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: .12em;
+    font-weight: 800;
+    color: var(--purple);
+    margin: 0 0 11px;
+}
+
+.details {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.detail {
+    border: 1px solid #eee8f5;
+    background: #fdfcff;
+    border-radius: 13px;
+    padding: 12px;
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.detail span {
+    display: block;
+    font-size: 10px;
+    color: var(--muted);
+    font-weight: 700;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: .035em;
+}
+
+.detail strong {
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.6;
+    white-space: pre-wrap;
+}
+
+.contact {
+    color: var(--purple);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.contact:hover {
+    text-decoration: underline;
+}
+
+/* NOTES */
+
+.notes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.note {
+    padding: 13px;
+    border-radius: 13px;
+    background: #faf8fd;
+    border: 1px solid #eee8f5;
+    font-size: 13px;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+    white-space: pre-wrap;
+}
+
+.note strong {
+    font-weight: 700;
+}
+
+/* CUSTOMER PHOTOS */
+
+.photos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    margin-top: 18px;
+}
+
+.photo-card {
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 12px;
+    background: #fdfcff;
+    min-width: 0;
+}
+
+.photo-title {
+    font-size: 12px;
+    font-weight: 700;
+    margin: 0 0 9px;
+}
+
+.photos img {
+    display: block;
+    width: 100%;
+    height: 230px;
+    object-fit: contain;
+    border-radius: 11px;
+    background: #f6f3fb;
+    cursor: zoom-in;
+}
+
+.photo-link {
+    display: block;
+    color: var(--purple);
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+    padding: 9px 0 0;
+    text-decoration: none;
+}
+
+.photo-link:hover {
+    text-decoration: underline;
+}
+
+/* ORDER STATUS FORM */
+
+.statusbar {
+    display: flex;
+    align-items: end;
+    gap: 10px;
+    flex-wrap: wrap;
+    border-top: 1px solid var(--line);
+    margin-top: 18px;
+    padding-top: 17px;
+}
+
+.statusbar label {
+    display: block;
+    font-size: 11px;
+    color: var(--muted);
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.statusbar select {
+    min-width: 250px;
+    border: 1px solid var(--line);
+    padding: 12px;
+    border-radius: 11px;
+    background: white;
+    color: var(--ink);
+    font-size: 13px;
+}
+
+/* EMPTY STATE */
+
+.empty {
+    background: #fff;
+    border: 1px dashed #cdbde4;
+    border-radius: 22px;
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--muted);
+}
+
+.empty h2 {
+    color: var(--ink);
+    font-weight: 700;
+}
+
+.empty p {
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.empty-icon {
+    font-size: 44px;
+}
+
+.no-results {
+    display: none;
+    text-align: center;
+    padding: 28px;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 11px;
+    line-height: 1.7;
+    padding: 28px 0 12px;
+}
+
+/* IMAGE PREVIEW MODAL */
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background: #170d26c7;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 18px;
+    z-index: 99;
+}
+
+.modal.open {
+    display: flex;
+}
+
+.modal-card {
+    width: min(900px, 100%);
+    max-height: 90vh;
+    overflow: auto;
+    background: white;
+    border-radius: 20px;
+    padding: 16px;
+}
+
+.modal-card h3 {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.modal-card img {
+    width: 100%;
+    max-height: 75vh;
+    object-fit: contain;
+}
+
+.modal-close {
+    float: right;
+}
+
+/* TABLET */
+
+@media (max-width: 1100px) {
+    .stats {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .details {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+    .shell {
+        padding: 11px;
+    }
+
+    .topbar {
+        padding: 16px;
+    }
+
+    .brand {
+        align-items: flex-start;
+        gap: 11px;
+    }
+
+    .logo {
+        width: 45px;
+        height: 45px;
+        font-size: 22px;
+        border-radius: 13px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    .subtitle {
+        font-size: 12px;
+    }
+
+    .stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+    }
+
+    .stat {
+        padding: 13px;
+    }
+
+    .stat-number {
+        font-size: 25px;
+    }
+
+    .order-head,
+    .order-body {
+        padding: 15px;
+    }
+
+    .details {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .photos,
+    .notes {
+        grid-template-columns: 1fr;
+    }
+
+    .photos img {
+        height: 200px;
+    }
+
+    .statusbar select {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .statusbar .btn {
+        width: 100%;
+    }
+
+    .search {
+        min-width: 100%;
+    }
+
+    .actions .btn {
+        flex: 1;
+    }
+
+    .toolbar .btn {
+        flex: 1;
+    }
+
+    .head-right {
+        width: 100%;
+    }
+
+    .head-right .btn {
+        flex: 1;
+    }
+}
+</style>
+</head>
+
+<body>
+<main class="shell">
+
+<header class="topbar">
+    <div class="brand">
+        <div class="logo">✦</div>
+        <div>
+            <div class="eyebrow">LUCKY PLANET STUDIOS</div>
+            <h1>SJ FRAMES · Admin Order Studio</h1>
+            <p class="subtitle">Custom laptop skins &amp; gifts · Secure order management</p>
+        </div>
+    </div>
+
+    <div class="actions">
+        <a class="btn green"
+           href="https://wa.me/{{ whatsapp_business_number }}"
+           target="_blank" rel="noopener">
+            ◉ Business WhatsApp
+        </a>
+
+        <a class="btn primary" href="{{ url_for('export_orders_excel') }}">
+            ↓ Export Excel
+        </a>
+
+        <button class="btn soft" type="button" onclick="window.location.reload()">
+            ↻ Refresh
+        </button>
+
+        <form method="post" action="{{ url_for('admin_logout') }}">
+            <input type="hidden" name="_csrf_token" value="{{ csrf_token() }}">
+            <button class="btn danger" type="submit">↪ Log out</button>
+        </form>
+    </div>
+</header>
+
+<section class="stats" aria-label="Order summary">
+
+    <div class="stat">
+        <div class="stat-top">
+            <span class="stat-label">TOTAL ORDERS</span>
+            <span class="stat-icon">▤</span>
+        </div>
+        <div class="stat-number">{{ total }}</div>
+        <div class="stat-foot">All received orders</div>
+    </div>
+
+    <div class="stat">
+        <div class="stat-top">
+            <span class="stat-label">NEW</span>
+            <span class="stat-icon">✦</span>
+        </div>
+        <div class="stat-number">{{ counts.get('New', 0) }}</div>
+        <div class="stat-foot">Ready for first review</div>
+    </div>
+
+    <div class="stat">
+        <div class="stat-top">
+            <span class="stat-label">IN PRODUCTION</span>
+            <span class="stat-icon">⚙</span>
+        </div>
+        <div class="stat-number">{{ counts.get('In Production', 0) }}</div>
+        <div class="stat-foot">Currently being made</div>
+    </div>
+
+    <div class="stat">
+        <div class="stat-top">
+            <span class="stat-label">AWAITING APPROVAL</span>
+            <span class="stat-icon">◷</span>
+        </div>
+        <div class="stat-number">{{ counts.get('Awaiting Customer Approval', 0) }}</div>
+        <div class="stat-foot">Need customer confirmation</div>
+    </div>
+
+    <div class="stat">
+        <div class="stat-top">
+            <span class="stat-label">COMPLETED</span>
+            <span class="stat-icon">✓</span>
+        </div>
+        <div class="stat-number">{{ counts.get('Completed', 0) }}</div>
+        <div class="stat-foot">Fulfilled orders</div>
+    </div>
+
+</section>
+
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        <div class="flash" role="status">
+            {% for message in messages %}
+                {{ message }}{% if not loop.last %}<br>{% endif %}
+            {% endfor %}
+        </div>
+    {% endif %}
+{% endwith %}
+
+<div class="section-title">
+    <div>
+        <h2>Order inbox</h2>
+        <p>Search customers, references, laptop models and order notes.</p>
+    </div>
+    <div class="result-count" id="resultCount">{{ orders|length }} orders</div>
+</div>
+
+<section class="toolbar">
+
+    <div class="search">
+        <input id="searchInput"
+               type="search"
+               placeholder="⌕  Search reference, customer, phone, laptop…"
+               aria-label="Search orders">
+    </div>
+
+    <div style="min-width:200px;flex:0 1 230px">
+        <select id="statusFilter" aria-label="Filter by status">
+            <option value="">All statuses</option>
+            {% for status in statuses %}
+                <option value="{{ status }}">{{ status }}</option>
+            {% endfor %}
+        </select>
+    </div>
+
+    <button class="btn soft" type="button" onclick="clearFilters()">
+        Clear filters
+    </button>
+
+    <a class="btn primary" href="{{ url_for('export_orders_excel') }}">
+        Export .xlsx
+    </a>
+
+</section>
+
+{% if not orders %}
+<section class="empty">
+    <div class="empty-icon">✦</div>
+    <h2>Your order inbox is ready</h2>
+    <p>New customer submissions will appear here with their reference number and design photos.</p>
+    <a class="btn soft" href="/" target="_blank" rel="noopener">
+        Open customer form ↗
+    </a>
+</section>
+{% endif %}
+
+<section id="orderList">
+
+{% for o in orders %}
+
+<article class="order"
+    data-search="{{ (o['reference'] ~ ' ' ~ o['customer_name'] ~ ' ' ~ o['whatsapp'] ~ ' ' ~ o['brand'] ~ ' ' ~ o['model'] ~ ' ' ~ o['finish'] ~ ' ' ~ o['features'] ~ ' ' ~ o['instructions'] ~ ' ' ~ o['status'])|lower|e }}"
+    data-status="{{ o['status'] }}">
+
+    <header class="order-head">
+
+        <div>
+            <div class="ref">{{ o['reference'] }}</div>
+            <div class="date">Received {{ o['created_at'] }}</div>
+        </div>
+
+        <div class="head-right">
+
+            <span class="badge {% if o['status']=='New' %}badge-new{% elif o['status']=='Completed' %}badge-completed{% elif o['status']=='Cancelled' %}badge-cancelled{% endif %}">
+                {{ o['status'] }}
+            </span>
+
+            <a class="btn green"
+               href="https://wa.me/{{ o['whatsapp']|replace('+','')|replace(' ','')|replace('-','')|replace('(','')|replace(')','') }}?text={{ ('Hello ' ~ o['customer_name'] ~ ', this is SJ FRAMES regarding order ' ~ o['reference'] ~ '. ')|urlencode }}"
+               target="_blank" rel="noopener">
+                Message customer ↗
+            </a>
+
+        </div>
+
+    </header>
+
+    <div class="order-body">
+
+        <h3 class="section-label">Customer &amp; laptop details</h3>
+
+        <div class="details">
+
+            <div class="detail">
+                <span>Customer name</span>
+                <strong>{{ o['customer_name'] }}</strong>
+            </div>
+
+            <div class="detail">
+                <span>Customer WhatsApp</span>
+                <strong>
+                    <a class="contact"
+                       href="https://wa.me/{{ o['whatsapp']|replace('+','')|replace(' ','')|replace('-','')|replace('(','')|replace(')','') }}"
+                       target="_blank" rel="noopener">
+                        {{ o['whatsapp'] }} ↗
+                    </a>
+                </strong>
+            </div>
+
+            <div class="detail">
+                <span>Laptop brand</span>
+                <strong>{{ o['brand'] }}</strong>
+            </div>
+
+            <div class="detail">
+                <span>Laptop model</span>
+                <strong>{{ o['model'] }}</strong>
+            </div>
+
+            <div class="detail">
+                <span>Lid measurements</span>
+                <strong>{{ o['lid_length'] }} cm × {{ o['lid_width'] }} cm</strong>
+            </div>
+
+            <div class="detail">
+                <span>Preferred finish</span>
+                <strong>{{ o['finish'] }}</strong>
+            </div>
+
+            <div class="detail">
+                <span>Order reference</span>
+                <strong>{{ o['reference'] }}</strong>
+            </div>
+
+            <div class="detail">
+                <span>Order status</span>
+                <strong>{{ o['status'] }}</strong>
+            </div>
+
+        </div>
+
+        <div class="notes">
+
+            <div class="note">
+                <strong>Logo / camera / cut-out details</strong><br>
+                {{ o['features'] or 'No special cut-out details provided.' }}
+            </div>
+
+            <div class="note">
+                <strong>Design instructions</strong><br>
+                {{ o['instructions'] or 'No additional instructions.' }}
+            </div>
+
+        </div>
+
+        <h3 class="section-label" style="margin-top:20px">
+            Customer uploads · private admin view
+        </h3>
+
+        <div class="photos">
+
+            <div class="photo-card">
+                <p class="photo-title">01 · Laptop lid photo</p>
+
+                <img loading="lazy"
+                     src="{{ url_for('admin_image', filename=o['lid_photo']) }}"
+                     alt="Customer laptop lid photo"
+                     onclick="openImage(this.src,'Laptop lid photo')">
+
+                <a class="photo-link"
+                   href="{{ url_for('admin_image', filename=o['lid_photo']) }}"
+                   target="_blank" rel="noopener">
+                    Open full image ↗
+                </a>
+            </div>
+
+            <div class="photo-card">
+                <p class="photo-title">02 · Requested design</p>
+
+                <img loading="lazy"
+                     src="{{ url_for('admin_image', filename=o['design_image']) }}"
+                     alt="Customer requested design"
+                     onclick="openImage(this.src,'Requested design')">
+
+                <a class="photo-link"
+                   href="{{ url_for('admin_image', filename=o['design_image']) }}"
+                   target="_blank" rel="noopener">
+                    Open full image ↗
+                </a>
+            </div>
+
+        </div>
+
+        <form class="statusbar"
+              method="post"
+              action="{{ url_for('update_status', order_id=o['id']) }}">
+
+            <input type="hidden" name="_csrf_token" value="{{ csrf_token() }}">
+
+            <div style="flex:1">
+                <label for="status-{{ o['id'] }}">UPDATE ORDER WORKFLOW</label>
+
+                <select id="status-{{ o['id'] }}" name="status">
+                    {% for status in statuses %}
+                        <option value="{{ status }}"
+                            {% if o['status']==status %}selected{% endif %}>
+                            {{ status }}
+                        </option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <button class="btn primary" type="submit">
+                Save status ✓
+            </button>
+
+        </form>
+
+    </div>
+
+</article>
+
+{% endfor %}
+
+</section>
+
+<div class="no-results" id="noResults">
+    No orders match these filters. Try a different search or clear filters.
+</div>
+
+<footer class="footer">
+    SJ FRAMES · LUCKY PLANET STUDIOS · Customer records and images are private.
+    Download Excel only to a secure device.
+</footer>
+
+</main>
+
+<!-- IMAGE PREVIEW MODAL -->
+
+<div class="modal"
+     id="imageModal"
+     role="dialog"
+     aria-modal="true"
+     aria-label="Image preview"
+     onclick="if(event.target===this)closeImage()">
+
+    <div class="modal-card">
+
+        <button class="btn soft modal-close"
+                type="button"
+                onclick="closeImage()">
+            Close ✕
+        </button>
+
+        <h3 id="modalTitle">Image preview</h3>
+
+        <img id="modalImage" alt="Expanded customer upload">
+
+    </div>
+
+</div>
+
+<script>
+const searchInput = document.getElementById('searchInput');
+const statusFilter = document.getElementById('statusFilter');
+
+function filterOrders() {
+    const q = (searchInput.value || '').trim().toLowerCase();
+    const st = statusFilter.value;
+
+    let visible = 0;
+
+    document.querySelectorAll('.order[data-search]').forEach(card => {
+        const show =
+            card.dataset.search.includes(q) &&
+            (!st || card.dataset.status === st);
+
+        card.style.display = show ? '' : 'none';
+
+        if (show) visible++;
+    });
+
+    document.getElementById('resultCount').textContent =
+        visible + ' order' + (visible === 1 ? '' : 's');
+
+    const any = document.querySelectorAll('.order[data-search]').length > 0;
+
+    document.getElementById('noResults').style.display =
+        visible === 0 && any ? 'block' : 'none';
+}
+
+function clearFilters() {
+    searchInput.value = '';
+    statusFilter.value = '';
+    filterOrders();
+}
+
+searchInput.addEventListener('input', filterOrders);
+statusFilter.addEventListener('change', filterOrders);
+
+function openImage(src, title) {
+    document.getElementById('modalImage').src = src;
+    document.getElementById('modalTitle').textContent = title;
+
+    document.getElementById('imageModal').classList.add('open');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeImage() {
+    document.getElementById('imageModal').classList.remove('open');
+    document.getElementById('modalImage').src = '';
+    document.body.style.overflow = '';
+}
+
+document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeImage();
+});
+</script>
+
+</body>
+</html>
