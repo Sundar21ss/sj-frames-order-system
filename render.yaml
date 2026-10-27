@@ -1,19 +1,16 @@
+
 services:
   - type: web
     name: sj-frames-order-system
     runtime: python
-    plan: starter
+    plan: free
     buildCommand: pip install -r requirements.txt
     startCommand: gunicorn app:app
-    disk:
-      name: sj-frames-order-data
-      mountPath: /var/data
-      sizeGB: 1
     envVars:
       - key: APP_ENV
         value: production
       - key: DATA_DIR
-        value: /var/data
+        value: /tmp/sj-frames-data
       - key: COOKIE_SECURE
         value: "1"
       - key: ADMIN_USERNAME
